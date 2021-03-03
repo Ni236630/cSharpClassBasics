@@ -1,0 +1,28 @@
+using System;
+
+namespace HiredEmployees
+{
+    public class Employee
+    {
+        public string FirstName { get; }
+        public string LastName { get; }
+        public string Title { get; set; }
+        public DateTime StartDate { get; set; }
+
+        public Employee(string firstName, string lastName, string title, DateTime startDate)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Title = title;
+            StartDate = startDate;
+        }
+
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
+    }
+}
